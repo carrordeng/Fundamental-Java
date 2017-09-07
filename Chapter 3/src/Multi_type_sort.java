@@ -15,11 +15,11 @@ public class Multi_type_sort {
             input[i] = sc.nextLine();
             if (isNumeric(input[i])) {
                 myArray.increaseint();
-                numricseq[myArray.getIntnumber()]=1;
+                numricseq[myArray.getIntnumber()-1]=1;
             }
             if (isChar(input[i])){
                 myArray.increasechar();
-                charseq[myArray.getCharnumber()]=1;
+                charseq[myArray.getCharnumber()-1]=1;
             }
         }
         myarray.setValue(input);
