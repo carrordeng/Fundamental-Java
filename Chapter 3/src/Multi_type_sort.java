@@ -13,14 +13,12 @@ public class Multi_type_sort {
         myArray<String> myarray = new myArray<String>();
         for (int i = 0; i < N; i++) {
             input[i] = sc.nextLine();
-            if (isNumeric(input[i])) {
-                myArray.increaseint();
-                numricseq[myArray.getIntnumber()-1]=1;
-            }
-            if (isChar(input[i])){
-                myArray.increasechar();
-                charseq[myArray.getCharnumber()-1]=1;
-            }
+            if (isNumeric(input[i]))
+                numricseq[i] = 1;
+
+            if (isChar(input[i]))
+                charseq[i] = 1;
+
         }
         myarray.setValue(input);
         sorted = myarray.sort_return();
@@ -58,22 +56,6 @@ class myArray<Type> {
     private static int intnumber = 0;
     private static int charnumber = 0;
     private Type[] value;
-
-    public static void increaseint() {
-        intnumber++;
-    }
-
-    public static void increasechar() {
-        charnumber++;
-    }
-
-    public static int getIntnumber() {
-        return intnumber;
-    }
-
-    public static int getCharnumber() {
-        return charnumber;
-    }
 
     public void setValue(Type value[]) {
         this.value = value;
